@@ -62,6 +62,9 @@ console.log(crewReports(superChimpTwo));
 console.log(crewReports(dog));
 console.log(crewReports(microAnimal));
 // Start an animal race!
+/*Within the function, race the five animals together by using the move method. An animal is done with the race when they reach 20 steps or greater. Store the result as a string: '____ took ____ turns to take 20 steps.' Fill in the blanks with the animal’s name and race result. Create a new array to store how many turns it takes each animal to complete the race.
+
+Return the array from the function, then print the results to the console (one animal per line).*/
 function fitnessTest(animal) {
   return animal.move;
 }
