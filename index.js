@@ -6,7 +6,7 @@ let superChimpOne = {
     age: 6,
     id: 3,
     move: function() {
-        return (Math.random()*10);
+      return (Math.ceil(Math.random()*10))
     }
 };
 
@@ -15,7 +15,10 @@ let salamander = {
     species: "Axolotl Salamander",
     mass: 0.1,
     age: 5,
-    id: 1
+    id: 1,
+    move: function() {
+      return (Math.ceil(Math.random()*10))
+    }
 };
 
 let superChimpTwo = {
@@ -23,7 +26,10 @@ let superChimpTwo = {
     species: "Chimpanzee",
     mass: 11,
     age: 6,
-    id: 2
+    id: 2,
+    move: function() {
+      return (Math.ceil(Math.random()*10))
+    }
 };
 
 let dog = {
@@ -31,7 +37,10 @@ let dog = {
     species: "Beagle",
     mass: 14,
     age: 5,
-    id: 7
+    id: 7,
+    move: function() {
+      return (Math.ceil(Math.random()*10))
+    }
 };
 
 let microAnimal = {
@@ -39,18 +48,20 @@ let microAnimal = {
     species: "Tardigrade",
     mass: 0.0000000001,
     age: 1,
-    id: 5
+    id: 5,
+    move: function() {
+      return (Math.ceil(Math.random()*10))
+    }
 };
 
 // After you have created the other object literals, add the astronautID property to each one.
 
 // Create an array to hold the animal objects.
-
-let crew = [[superChimpOne], [salamander], [superChimpTwo], [dog], [microAnimal]];
+let crew = [superChimpOne, salamander, superChimpTwo, dog, microAnimal];
 // Print out the relevant information about each animal.
 for (i=0; i < crew.length; i++){
   for (item in crew[i]) {
-   console.log(crew[i][item]);
+   console.log(`${item}: ${crew[i][item]}`);
 } }
 function crewReports(animal) {
   return (`${animal.name} is a ${animal.species}. They are ${animal.age} years old and ${animal.mass} kilograms. Their ID is ${animal.id}.`);
@@ -66,6 +77,8 @@ console.log(crewReports(microAnimal));
 
 Return the array from the function, then print the results to the console (one animal per line).*/
 function fitnessTest(animal) {
-  return animal.move;
+  return animal.move();
 }
-console.log(fitnessTest(superChimpOne));
+for (let i=0; i < crew.length; i++){
+console.log(`${crew[i].name} took ${fitnessTest(crew[i])}  turns to take 20 steps.`);
+}
