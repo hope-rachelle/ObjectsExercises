@@ -79,6 +79,7 @@ Return the array from the function, then print the results to the console (one a
 function fitnessTest(animal) {
   return animal.move();
 }
+console.log('\nRACE RESULTS:');
 for (let i=0; i < crew.length; i++){
-console.log(`${crew[i].name} took ${fitnessTest(crew[i])}  turns to take 20 steps.`);
+ console.log(`${crew[i].name} took ${fitnessTest(crew[i])}  turns to take 20 steps.`);
 }
