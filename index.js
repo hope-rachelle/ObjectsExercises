@@ -66,12 +66,9 @@ for (i=0; i < crew.length; i++){
 function crewReports(animal) {
   return (`${animal.name} is a ${animal.species}. They are ${animal.age} years old and ${animal.mass} kilograms. Their ID is ${animal.id}.`);
 } 
-//for (i=0; i < crew.length; i++){
-console.log(crewReports(superChimpOne));
-console.log(crewReports(salamander));
-console.log(crewReports(superChimpTwo));
-console.log(crewReports(dog));
-console.log(crewReports(microAnimal));
+for (i=0; i < crew.length; i++){
+    console.log(crewReports(crew[i]));}
+
 // Start an animal race!
 /*Within the function, race the five animals together by using the move method. An animal is done with the race when they reach 20 steps or greater. Store the result as a string: '____ took ____ turns to take 20 steps.' Fill in the blanks with the animal’s name and race result. Create a new array to store how many turns it takes each animal to complete the race.
 
